@@ -1,0 +1,222 @@
+2025-10-03 22:06:51 - a2flight_client - INFO - Arrow Flight client initialized: 'etl'
+2025-10-03 22:06:51 - a2flight_client - INFO - Connecting to grpc://localhost:50054...
+2025-10-03 22:06:51 - a2flight_client - INFO - Connected to 'grpc://localhost:50054'
+2025-10-03 22:06:51 - a2flight_client - INFO - INSERT 3 rows -> 'a2users'
+2025-10-03 22:06:51 - a2flight_client - ERROR - INSERT failed: A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: ProgrammingError: INVALID_ARGUMENT: [libpq] Failed to execute COPY statement: PGRES_FATAL_ERROR ERROR:  incorrect binary data format
+CONTEXT:  COPY a2tmp_a2users_a2_52286_175950941156, line 1, column a2user_id
+. SQLSTATE: 22P03. Detail: Failed. gRPC client debug context: UNKNOWN:Error received from peer ipv6:%5B::1%5D:50054 {grpc_message:"A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: ProgrammingError: INVALID_ARGUMENT: [libpq] Failed to execute COPY statement: PGRES_FATAL_ERROR ERROR:  incorrect binary data format\nCONTEXT:  COPY a2tmp_a2users_a2_52286_175950941156, line 1, column a2user_id\n. SQLSTATE: 22P03. Detail: Failed", grpc_status:2, created_time:"2025-10-03T16:36:51.6220096+00:00"}. Client context: OK
+Traceback (most recent call last):
+  File "C:\a2flight_client\a2flight_client.py", line 204, in insert
+    writer.close()
+    ~~~~~~~~~~~~^^
+  File "pyarrow\\_flight.pyx", line 1232, in pyarrow._flight.MetadataRecordBatchWriter.close
+  File "pyarrow\\_flight.pyx", line 58, in pyarrow._flight.check_flight_status
+pyarrow._flight.FlightServerError: A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: ProgrammingError: INVALID_ARGUMENT: [libpq] Failed to execute COPY statement: PGRES_FATAL_ERROR ERROR:  incorrect binary data format
+CONTEXT:  COPY a2tmp_a2users_a2_52286_175950941156, line 1, column a2user_id
+. SQLSTATE: 22P03. Detail: Failed. gRPC client debug context: UNKNOWN:Error received from peer ipv6:%5B::1%5D:50054 {grpc_message:"A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: ProgrammingError: INVALID_ARGUMENT: [libpq] Failed to execute COPY statement: PGRES_FATAL_ERROR ERROR:  incorrect binary data format\nCONTEXT:  COPY a2tmp_a2users_a2_52286_175950941156, line 1, column a2user_id\n. SQLSTATE: 22P03. Detail: Failed", grpc_status:2, created_time:"2025-10-03T16:36:51.6220096+00:00"}. Client context: OK
+2025-10-03 22:06:51 - a2flight_client - INFO - Connection closed
+2025-10-03 22:11:48 - a2flight_client - INFO - Arrow Flight client initialized: 'etl'
+2025-10-03 22:11:48 - a2flight_client - INFO - Connecting to grpc://localhost:50054...
+2025-10-03 22:11:48 - a2flight_client - INFO - Connected to 'grpc://localhost:50054'
+2025-10-03 22:11:48 - a2flight_client - INFO - INSERT 3 rows -> 'a2users'
+2025-10-03 22:11:48 - a2flight_client - ERROR - INSERT failed: A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: InternalError: INTERNAL: PostgresType::FromSchema(*type_resolver_, source_schema.children[i], &pg_type, &na_error) failed: (129) not supported: Can't map Arrow type 'na' to Postgres type
+Detail: D:/a/arrow-adbc/arrow-adbc/adbc/c/driver/postgresql/statement.cc:473. Detail: Failed. gRPC client debug context: UNKNOWN:Error received from peer ipv6:%5B::1%5D:50054 {created_time:"2025-10-03T16:41:48.767683+00:00", grpc_status:2, grpc_message:"A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: InternalError: INTERNAL: PostgresType::FromSchema(*type_resolver_, source_schema.children[i], &pg_type, &na_error) failed: (129) not supported: Can\'t map Arrow type \'na\' to Postgres type\nDetail: D:/a/arrow-adbc/arrow-adbc/adbc/c/driver/postgresql/statement.cc:473. Detail: Failed"}. Client context: OK
+Traceback (most recent call last):
+  File "C:\a2flight_client\a2flight_client.py", line 204, in insert
+    writer.close()
+    ~~~~~~~~~~~~^^
+  File "pyarrow\\_flight.pyx", line 1232, in pyarrow._flight.MetadataRecordBatchWriter.close
+  File "pyarrow\\_flight.pyx", line 58, in pyarrow._flight.check_flight_status
+pyarrow._flight.FlightServerError: A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: InternalError: INTERNAL: PostgresType::FromSchema(*type_resolver_, source_schema.children[i], &pg_type, &na_error) failed: (129) not supported: Can't map Arrow type 'na' to Postgres type
+Detail: D:/a/arrow-adbc/arrow-adbc/adbc/c/driver/postgresql/statement.cc:473. Detail: Failed. gRPC client debug context: UNKNOWN:Error received from peer ipv6:%5B::1%5D:50054 {created_time:"2025-10-03T16:41:48.767683+00:00", grpc_status:2, grpc_message:"A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: InternalError: INTERNAL: PostgresType::FromSchema(*type_resolver_, source_schema.children[i], &pg_type, &na_error) failed: (129) not supported: Can\'t map Arrow type \'na\' to Postgres type\nDetail: D:/a/arrow-adbc/arrow-adbc/adbc/c/driver/postgresql/statement.cc:473. Detail: Failed"}. Client context: OK
+2025-10-03 22:11:48 - a2flight_client - INFO - Connection closed
+2025-10-04 10:25:03 - a2flight_client - INFO - Arrow Flight client initialized: 'etl'
+2025-10-04 10:25:03 - a2flight_client - INFO - Connecting to grpc://localhost:50054...
+2025-10-04 10:25:03 - a2flight_client - INFO - Connected to 'grpc://localhost:50054'
+2025-10-04 10:25:03 - a2flight_client - INFO - INSERT 3 rows -> 'a2users'
+2025-10-04 10:25:07 - a2flight_client - ERROR - INSERT failed: Flight returned unavailable error, with message: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:50054: WSA Error. gRPC client debug context: UNKNOWN:failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:50054: WSA Error {grpc_status:14, created_time:"2025-10-04T04:55:07.2202183+00:00"}. Additionally, could not finish writing record batches before closing. Client context: IOError: Could not write record batch to stream (server disconnect?). Detail: flight::ServerErrorTagStatusDetail
+Traceback (most recent call last):
+  File "C:\a2flight_client\a2flight_client.py", line 197, in insert
+    writer, metadata_reader = self._client.do_put(
+                              ~~~~~~~~~~~~~~~~~~~^
+        descriptor,
+        ^^^^^^^^^^^
+        arrow_table.schema
+        ^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "pyarrow\\_flight.pyx", line 1725, in pyarrow._flight.FlightClient.do_put
+  File "pyarrow\\_flight.pyx", line 68, in pyarrow._flight.check_flight_status
+pyarrow._flight.FlightUnavailableError: Flight returned unavailable error, with message: failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:50054: WSA Error. gRPC client debug context: UNKNOWN:failed to connect to all addresses; last error: UNAVAILABLE: ipv4:127.0.0.1:50054: WSA Error {grpc_status:14, created_time:"2025-10-04T04:55:07.2202183+00:00"}. Additionally, could not finish writing record batches before closing. Client context: IOError: Could not write record batch to stream (server disconnect?). Detail: flight::ServerErrorTagStatusDetail
+2025-10-04 10:25:07 - a2flight_client - INFO - Connection closed
+2025-10-04 10:27:14 - a2flight_client - INFO - Arrow Flight client initialized: 'etl'
+2025-10-04 10:27:14 - a2flight_client - INFO - Connecting to grpc://localhost:50054...
+2025-10-04 10:27:14 - a2flight_client - INFO - Connected to 'grpc://localhost:50054'
+2025-10-04 10:27:14 - a2flight_client - INFO - INSERT 3 rows -> 'a2users'
+2025-10-04 10:27:18 - a2flight_client - ERROR - Arrow Flight server is not running at grpc://localhost:50054
+2025-10-04 10:27:18 - a2flight_client - INFO - Connection closed
+2025-10-04 12:22:34 - a2flight_client - INFO - Arrow Flight client initialized: 'etl'
+2025-10-04 12:22:34 - a2flight_client - INFO - Connecting to grpc://localhost:50054...
+2025-10-04 12:22:34 - a2flight_client - INFO - Connected to 'grpc://localhost:50054'
+2025-10-04 12:22:34 - a2flight_client - INFO - INSERT 3 rows -> 'a2users'
+2025-10-04 12:22:34 - a2flight_client - ERROR - INSERT failed: A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: InternalError: INTERNAL: PostgresType::FromSchema(*type_resolver_, source_schema.children[i], &pg_type, &na_error) failed: (129) not supported: Can't map Arrow type 'na' to Postgres type
+Detail: D:/a/arrow-adbc/arrow-adbc/adbc/c/driver/postgresql/statement.cc:473. Detail: Failed. gRPC client debug context: UNKNOWN:Error received from peer ipv6:%5B::1%5D:50054 {created_time:"2025-10-04T06:52:34.222225+00:00", grpc_status:2, grpc_message:"A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: InternalError: INTERNAL: PostgresType::FromSchema(*type_resolver_, source_schema.children[i], &pg_type, &na_error) failed: (129) not supported: Can\'t map Arrow type \'na\' to Postgres type\nDetail: D:/a/arrow-adbc/arrow-adbc/adbc/c/driver/postgresql/statement.cc:473. Detail: Failed"}. Client context: OK
+Traceback (most recent call last):
+  File "C:\a2flight_client\a2flight_client.py", line 211, in insert
+    writer.close()
+    ~~~~~~~~~~~~^^
+  File "pyarrow\\_flight.pyx", line 1232, in pyarrow._flight.MetadataRecordBatchWriter.close
+  File "pyarrow\\_flight.pyx", line 58, in pyarrow._flight.check_flight_status
+pyarrow._flight.FlightServerError: A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: InternalError: INTERNAL: PostgresType::FromSchema(*type_resolver_, source_schema.children[i], &pg_type, &na_error) failed: (129) not supported: Can't map Arrow type 'na' to Postgres type
+Detail: D:/a/arrow-adbc/arrow-adbc/adbc/c/driver/postgresql/statement.cc:473. Detail: Failed. gRPC client debug context: UNKNOWN:Error received from peer ipv6:%5B::1%5D:50054 {created_time:"2025-10-04T06:52:34.222225+00:00", grpc_status:2, grpc_message:"A2DBQueryError: Pooled Ins_binary write failed: A2DBConnectionError: Connection acquisition failed: InternalError: INTERNAL: PostgresType::FromSchema(*type_resolver_, source_schema.children[i], &pg_type, &na_error) failed: (129) not supported: Can\'t map Arrow type \'na\' to Postgres type\nDetail: D:/a/arrow-adbc/arrow-adbc/adbc/c/driver/postgresql/statement.cc:473. Detail: Failed"}. Client context: OK
+2025-10-04 12:22:34 - a2flight_client - INFO - Connection closed
+2025-10-04 14:34:18 - a2flight_client - INFO - Arrow Flight client initialized: 'etl'
+2025-10-04 14:34:18 - a2flight_client - INFO - Connecting to grpc://localhost:50054...
+2025-10-04 14:34:18 - a2flight_client - INFO - Authenticating as 'etl'...
+2025-10-04 14:34:18 - a2flight_client - ERROR - Connection failed: Authentication failed for client 'etl'.
+Possible reasons:
+  - Invalid API key
+  - IP address not whitelisted
+  - Client disabled on server
+Original error: Stream is closed.. Detail: Unauthenticated
+2025-10-04 14:34:18 - a2flight_client - INFO - Connection closed
+2025-10-04 14:39:45 - a2flight_client - INFO - Arrow Flight client initialized: 'etl'
+2025-10-04 14:39:45 - a2flight_client - INFO - Connecting to grpc://localhost:50054...
+2025-10-04 14:39:45 - a2flight_client - INFO - Authenticating as 'etl'...
+2025-10-04 14:39:45 - a2flight_client - ERROR - Connection failed: Authentication failed for client 'etl'.
+Possible reasons:
+  - Invalid API key
+  - IP address not whitelisted
+  - Client disabled on server
+Original error: Stream is closed.. Detail: Unauthenticated
+2025-10-04 14:39:45 - a2flight_client - INFO - Connection closed
+2025-10-04 14:39:49 - a2flight_client - INFO - Arrow Flight client initialized: 'etl'
+2025-10-04 14:39:49 - a2flight_client - INFO - Connecting to grpc://localhost:50054...
+2025-10-04 14:39:49 - a2flight_client - INFO - Authenticating as 'etl'...
+2025-10-04 14:39:49 - a2flight_client - ERROR - Connection failed: Authentication failed for client 'etl'.
+Possible reasons:
+  - Invalid API key
+  - IP address not whitelisted
+  - Client disabled on server
+Original error: Stream is closed.. Detail: Unauthenticated
+2025-10-04 14:39:49 - a2flight_client - INFO - Connection closed
+2025-10-04 16:16:08 - a2flight_client - INFO - Arrow Flight client initialized: 'etl'
+2025-10-04 16:16:08 - a2flight_client - INFO - Connecting to grpc://localhost:50054...
+2025-10-04 16:16:08 - a2flight_client - INFO - Server does not require authentication
+2025-10-04 16:16:08 - a2flight_client - INFO - Connected to 'grpc://localhost:50054'
+2025-10-04 16:16:45 - a2flight_client - INFO - Connection closed
+2025-10-04 16:19:56 - a2flight_client - INFO - Arrow Flight client initialized: 'etl'
+2025-10-04 16:19:56 - a2flight_client - INFO - Connecting to grpc://localhost:50054...
+2025-10-04 16:19:56 - a2flight_client - INFO - Server does not require authentication
+2025-10-04 16:19:56 - a2flight_client - INFO - Connected to 'grpc://localhost:50054'
+2025-10-04 16:19:56 - a2flight_client - INFO - SELECT: SELECT a2timestamp, device_id FROM a2db_test_tbl...
+2025-10-04 16:19:56 - a2flight_client - INFO - SELECT complete: 0 rows in 48.7ms
+2025-10-04 16:19:56 - a2flight_client - INFO - INSERT 1,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:19:56 - a2flight_client - INFO - INSERT complete: 1,000 rows in 53.5ms
+2025-10-04 16:19:56 - a2flight_client - INFO - INSERT 15,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:19:56 - a2flight_client - INFO - INSERT complete: 15,000 rows in 145.4ms
+2025-10-04 16:19:57 - a2flight_client - INFO - INSERT 50,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:19:57 - a2flight_client - INFO - INSERT complete: 50,000 rows in 411.8ms
+2025-10-04 16:19:58 - a2flight_client - INFO - INSERT 150,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:20:00 - a2flight_client - INFO - INSERT complete: 150,000 rows in 1155.9ms
+2025-10-04 16:20:02 - a2flight_client - INFO - INSERT 300,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:20:05 - a2flight_client - INFO - INSERT complete: 300,000 rows in 2469.7ms
+2025-10-04 16:20:09 - a2flight_client - INFO - INSERT 500,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:20:15 - a2flight_client - INFO - INSERT complete: 500,000 rows in 5729.2ms
+2025-10-04 16:20:21 - a2flight_client - INFO - INSERT 750,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:20:28 - a2flight_client - INFO - INSERT complete: 750,000 rows in 6758.4ms
+2025-10-04 16:20:37 - a2flight_client - INFO - INSERT 1,000,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:20:47 - a2flight_client - INFO - INSERT complete: 1,000,000 rows in 9935.4ms
+2025-10-04 16:21:00 - a2flight_client - INFO - INSERT 1,500,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:21:15 - a2flight_client - INFO - INSERT complete: 1,500,000 rows in 15096.6ms
+2025-10-04 16:21:15 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 1000...
+2025-10-04 16:21:15 - a2flight_client - INFO - SELECT complete: 1,000 rows in 16.3ms
+2025-10-04 16:21:15 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 15000...
+2025-10-04 16:21:15 - a2flight_client - INFO - SELECT complete: 15,000 rows in 51.7ms
+2025-10-04 16:21:15 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 50000...
+2025-10-04 16:21:15 - a2flight_client - INFO - SELECT complete: 50,000 rows in 86.3ms
+2025-10-04 16:21:15 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 150000...
+2025-10-04 16:21:15 - a2flight_client - INFO - SELECT complete: 150,000 rows in 249.2ms
+2025-10-04 16:21:15 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 300000...
+2025-10-04 16:21:16 - a2flight_client - INFO - SELECT complete: 300,000 rows in 537.2ms
+2025-10-04 16:21:16 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 500000...
+2025-10-04 16:21:17 - a2flight_client - INFO - SELECT complete: 500,000 rows in 827.0ms
+2025-10-04 16:21:17 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 750000...
+2025-10-04 16:21:18 - a2flight_client - INFO - SELECT complete: 750,000 rows in 1240.2ms
+2025-10-04 16:21:18 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 1000000...
+2025-10-04 16:21:20 - a2flight_client - INFO - SELECT complete: 1,000,000 rows in 1665.7ms
+2025-10-04 16:21:20 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 1500000...
+2025-10-04 16:21:22 - a2flight_client - INFO - SELECT complete: 1,500,000 rows in 2577.8ms
+2025-10-04 16:21:22 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 1000...
+2025-10-04 16:21:22 - a2flight_client - INFO - SELECT complete: 1,000 rows in 10.6ms
+2025-10-04 16:21:22 - a2flight_client - INFO - UPDATE 1,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:21:22 - a2flight_client - INFO - UPDATE complete: 1,000 rows in 60.6ms
+2025-10-04 16:21:22 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 15000...
+2025-10-04 16:21:22 - a2flight_client - INFO - SELECT complete: 15,000 rows in 31.1ms
+2025-10-04 16:21:22 - a2flight_client - INFO - UPDATE 15,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:21:22 - a2flight_client - INFO - UPDATE complete: 15,000 rows in 194.2ms
+2025-10-04 16:21:22 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 50000...
+2025-10-04 16:21:23 - a2flight_client - INFO - SELECT complete: 50,000 rows in 90.3ms
+2025-10-04 16:21:23 - a2flight_client - INFO - UPDATE 50,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:21:23 - a2flight_client - INFO - UPDATE complete: 50,000 rows in 546.0ms
+2025-10-04 16:21:23 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 150000...
+2025-10-04 16:21:23 - a2flight_client - INFO - SELECT complete: 150,000 rows in 250.2ms
+2025-10-04 16:21:23 - a2flight_client - INFO - UPDATE 150,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:21:25 - a2flight_client - INFO - UPDATE complete: 150,000 rows in 1180.3ms
+2025-10-04 16:21:25 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 300000...
+2025-10-04 16:21:25 - a2flight_client - INFO - SELECT complete: 300,000 rows in 520.1ms
+2025-10-04 16:21:25 - a2flight_client - INFO - UPDATE 300,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:21:27 - a2flight_client - INFO - UPDATE complete: 300,000 rows in 1899.2ms
+2025-10-04 16:21:27 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 500000...
+2025-10-04 16:21:28 - a2flight_client - INFO - SELECT complete: 500,000 rows in 814.3ms
+2025-10-04 16:21:28 - a2flight_client - INFO - UPDATE 500,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:21:31 - a2flight_client - INFO - UPDATE complete: 500,000 rows in 2690.2ms
+2025-10-04 16:21:31 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 750000...
+2025-10-04 16:21:32 - a2flight_client - INFO - SELECT complete: 750,000 rows in 1243.8ms
+2025-10-04 16:21:32 - a2flight_client - INFO - UPDATE 750,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:21:35 - a2flight_client - INFO - UPDATE complete: 750,000 rows in 3142.1ms
+2025-10-04 16:21:35 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 1000000...
+2025-10-04 16:21:37 - a2flight_client - INFO - SELECT complete: 1,000,000 rows in 1706.5ms
+2025-10-04 16:21:37 - a2flight_client - INFO - UPDATE 1,000,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:21:45 - a2flight_client - INFO - UPDATE complete: 1,000,000 rows in 8580.5ms
+2025-10-04 16:21:45 - a2flight_client - INFO - SELECT: SELECT * FROM a2db_test_tbl LIMIT 1500000...
+2025-10-04 16:21:48 - a2flight_client - INFO - SELECT complete: 1,500,000 rows in 2497.6ms
+2025-10-04 16:21:48 - a2flight_client - INFO - UPDATE 1,500,000 rows -> 'a2db_test_tbl'
+2025-10-04 16:21:56 - a2flight_client - INFO - UPDATE complete: 1,500,000 rows in 7695.1ms
+2025-10-04 16:21:56 - a2flight_client - INFO - SELECT: SELECT a2timestamp, device_id FROM a2db_test_tbl LIMIT 1000...
+2025-10-04 16:21:56 - a2flight_client - INFO - SELECT complete: 1,000 rows in 7.2ms
+2025-10-04 16:21:56 - a2flight_client - INFO - DELETE 1,000 rows <- 'a2db_test_tbl'
+2025-10-04 16:21:56 - a2flight_client - INFO - DELETE complete: 1,000 rows in 56.1ms
+2025-10-04 16:21:56 - a2flight_client - INFO - SELECT: SELECT a2timestamp, device_id FROM a2db_test_tbl LIMIT 15000...
+2025-10-04 16:21:56 - a2flight_client - INFO - SELECT complete: 15,000 rows in 27.5ms
+2025-10-04 16:21:56 - a2flight_client - INFO - DELETE 15,000 rows <- 'a2db_test_tbl'
+2025-10-04 16:21:56 - a2flight_client - INFO - DELETE complete: 15,000 rows in 123.2ms
+2025-10-04 16:21:56 - a2flight_client - INFO - SELECT: SELECT a2timestamp, device_id FROM a2db_test_tbl LIMIT 50000...
+2025-10-04 16:21:56 - a2flight_client - INFO - SELECT complete: 50,000 rows in 24.2ms
+2025-10-04 16:21:56 - a2flight_client - INFO - DELETE 50,000 rows <- 'a2db_test_tbl'
+2025-10-04 16:21:56 - a2flight_client - INFO - DELETE complete: 50,000 rows in 305.1ms
+2025-10-04 16:21:56 - a2flight_client - INFO - SELECT: SELECT a2timestamp, device_id FROM a2db_test_tbl LIMIT 150000...
+2025-10-04 16:21:56 - a2flight_client - INFO - SELECT complete: 150,000 rows in 72.3ms
+2025-10-04 16:21:56 - a2flight_client - INFO - DELETE 150,000 rows <- 'a2db_test_tbl'
+2025-10-04 16:21:57 - a2flight_client - INFO - DELETE complete: 150,000 rows in 833.3ms
+2025-10-04 16:21:57 - a2flight_client - INFO - SELECT: SELECT a2timestamp, device_id FROM a2db_test_tbl LIMIT 300000...
+2025-10-04 16:21:57 - a2flight_client - INFO - SELECT complete: 300,000 rows in 134.4ms
+2025-10-04 16:21:57 - a2flight_client - INFO - DELETE 300,000 rows <- 'a2db_test_tbl'
+2025-10-04 16:21:59 - a2flight_client - INFO - DELETE complete: 300,000 rows in 1681.4ms
+2025-10-04 16:21:59 - a2flight_client - INFO - SELECT: SELECT a2timestamp, device_id FROM a2db_test_tbl LIMIT 500000...
+2025-10-04 16:21:59 - a2flight_client - INFO - SELECT complete: 500,000 rows in 208.7ms
+2025-10-04 16:21:59 - a2flight_client - INFO - DELETE 500,000 rows <- 'a2db_test_tbl'
+2025-10-04 16:22:04 - a2flight_client - INFO - DELETE complete: 500,000 rows in 5158.2ms
+2025-10-04 16:22:05 - a2flight_client - INFO - SELECT: SELECT a2timestamp, device_id FROM a2db_test_tbl LIMIT 750000...
+2025-10-04 16:22:05 - a2flight_client - INFO - SELECT complete: 750,000 rows in 341.3ms
+2025-10-04 16:22:05 - a2flight_client - INFO - DELETE 750,000 rows <- 'a2db_test_tbl'
+2025-10-04 16:22:09 - a2flight_client - INFO - DELETE complete: 750,000 rows in 4020.7ms
+2025-10-04 16:22:09 - a2flight_client - INFO - SELECT: SELECT a2timestamp, device_id FROM a2db_test_tbl LIMIT 1000000...
+2025-10-04 16:22:09 - a2flight_client - INFO - SELECT complete: 1,000,000 rows in 466.1ms
+2025-10-04 16:22:09 - a2flight_client - INFO - DELETE 1,000,000 rows <- 'a2db_test_tbl'
+2025-10-04 16:22:15 - a2flight_client - INFO - DELETE complete: 1,000,000 rows in 5684.5ms
+2025-10-04 16:22:15 - a2flight_client - INFO - SELECT: SELECT a2timestamp, device_id FROM a2db_test_tbl LIMIT 1500000...
+2025-10-04 16:22:16 - a2flight_client - INFO - SELECT complete: 1,500,000 rows in 758.6ms
+2025-10-04 16:22:16 - a2flight_client - INFO - DELETE 1,500,000 rows <- 'a2db_test_tbl'
+2025-10-04 16:22:23 - a2flight_client - INFO - DELETE complete: 1,500,000 rows in 7477.1ms
+2025-10-04 16:22:23 - a2flight_client - INFO - Connection closed
